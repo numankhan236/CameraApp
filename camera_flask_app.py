@@ -97,7 +97,7 @@ def gen_frames():  # generate frame by frame from camera
             pass
 
 
-@app.route('/')
+@app.route('/camera')
 def index():
     return render_template('CameraApp.html')
     
