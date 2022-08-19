@@ -21,9 +21,8 @@ except OSError as error:
     pass
 
 #Load pretrained face detection model    
-model_path1 = r"C:\Users\skyhwak computer\Desktop\object_detection_app\Camera_Flask_App-main\saved_model\deploy.prototxt.txt"
-model_path2 = r"C:\Users\skyhwak computer\Desktop\object_detection_app\Camera_Flask_App-main\saved_model\res10_300x300_ssd_iter_140000.caffemodel"
-net = cv2.dnn.readNetFromCaffe(model_path1 , model_path2)
+
+net = cv2.dnn.readNetFromCaffe('./saved_model/deploy.prototxt.txt', './saved_model/res10_300x300_ssd_iter_140000.caffemodel')
 
 #instatiate flask app  
 app = Flask(__name__, template_folder='./templates')
